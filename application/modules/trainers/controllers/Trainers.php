@@ -51,7 +51,6 @@ class Trainers extends CI_Controller {
         // Helper para as funções de URL e redirecionamento
         $this->load->helper('url');
 
-
         // Caso recebe um ID de treinador
         if ($id) {
             $this->load->model('Trainer');

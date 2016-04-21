@@ -56,6 +56,8 @@
                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Excluir
                         </a>
 
+                        <span class="invisible pull-right"> - </span>
+
                         <!-- Botão Editar -->
                         <a href="<?php echo base_url('trainers/edit/' . $trainer->id_trainer) ?>" class="btn btn-xs btn-primary pull-right">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar
