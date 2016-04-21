@@ -48,6 +48,10 @@ class Trainers extends CI_Controller {
         Remove trainador
     */
     public function remove ($id=0) {
+        // Helper para as funções de URL e redirecionamento
+        $this->load->helper('url');
+
+
         // Caso recebe um ID de treinador
         if ($id) {
             $this->load->model('Trainer');
@@ -55,6 +59,7 @@ class Trainers extends CI_Controller {
             $trainer = new Trainer($id);
             $trainer->delete();
 
+            redirect(base_url('trainers'));
         }
 
         else {
