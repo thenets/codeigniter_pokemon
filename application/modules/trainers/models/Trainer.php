@@ -16,16 +16,16 @@ class Trainer extends CI_Model {
 
 
         /*
-            Recupera um post já existente do banco de dados
+            Recupera um trainer já existente do banco de dados
                 @ se $id_trainer for passado como parâmetro
         */
         if ($id_trainer) {
-            // Obtém o post que com respectivo "id_trainer"
+            // Obtém o trainer que com respectivo "id_trainer"
             $this->db->where('id_trainer', $id_trainer);
             // Obtém o primeiro resultado (index 0) da busca
             $result = $this->db->get('trainers')->result()[0];
 
-            // Monta o objeto post
+            // Monta o objeto trainer
             $this->id_trainer           = $result->id_trainer;
             $this->name                 = $result->name;
             $this->description          = $result->description;
@@ -43,6 +43,8 @@ class Trainer extends CI_Model {
             //  automaticamente gerado pelo banco de dados.
             unset( $this->id_trainer );
             unset( $this->created );
+            $this->money                = 0;
+            $this->discovered_pokemons  = 0;
         }
     }
 

@@ -37,10 +37,10 @@ class Trainers extends CI_Controller {
     public function add () {
         $this->load->model('Trainer');
 
-        $new_post               = new Trainer();
-        $new_post->name         = $_POST['name'];
-        $new_post->description  = $_POST['description'];
-        $new_post->save();
+        $new_trainer               = new Trainer();
+        $new_trainer->name         = $_POST['name'];
+        $new_trainer->description  = $_POST['description'];
+        $new_trainer->save();
     }
 
 
